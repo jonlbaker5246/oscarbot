@@ -1,19 +1,16 @@
 {
   "version": 2,
-  "routes": [
-    { "src": "/api/(.*)", "dest": "src/index.ts" },
-    { "src": "/", "dest": "public/index.html" }
-  ],
   "builds": [
     {
       "src": "src/index.ts",
       "use": "@vercel/node"
     }
   ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "src/index.ts" },
+    { "src": "/", "dest": "public/index.html" }
+  ],
   "env": {
     "NODE_ENV": "production"
   }
 }
-git add vercel.json
-git commit -m "Added vercel.json for routing"
-git push
